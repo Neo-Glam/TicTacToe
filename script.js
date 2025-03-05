@@ -41,7 +41,7 @@ const game =(function() {
                 console.log(gameboard.winner)
             }
             else if (gameboard.gameboard[6] === gameboard.gameboard[7] && 
-                gameboard.gameboard[6] === gameboard.gameboard[7] &&
+                gameboard.gameboard[6] === gameboard.gameboard[8] &&
                 gameboard.gameboard[6] != ""
             ){
                 gameboard.winner = gameboard.lastPlayed;
