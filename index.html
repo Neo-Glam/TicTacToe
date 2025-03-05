@@ -4,10 +4,54 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>TicTacToe</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Doto:wght@100..900&display=swap');
+    </style>
     <link rel="stylesheet" href="./style.css">
-    <script src="./script.js"></script>
+    <script src="./script.js" defer></script>
 </head>
 <body>
+    <div class="container">
+        <div class="header">
+            <h1>TicTacToe</h1>
+            <button data-open-modal id="openAddPLayerModal">PLAY</button>
+
+            <dialog data-modal id="addPLayerModal">
+                <h2>NEW PLAYER!</h2>
+                <form  id="newPLayerForm">
+                    <div class="formSec">
+                        <label for="playerOne-name"></label>
+                        <input type="text" id="playerOne-name" name="playerOne" maxlength="20" placeholder="PLAYER 1" required >
+                    </div>
+                    <div class="formSec">
+                        <label for="playerTwo-name"></label>
+                        <input type="text" id="playerTwo-name" name="playerTwo" maxlength="20" placeholder="PLAYER 2" required >
+                    </div>
+                    <button type="submit">StartGame</button>
+                    <button data-close-modal id="closeAddPLayerModal">Close</button>
     
+                </form>
+            </dialog>
+
+            <dialog data-modal id="winnerModal">
+                <div id="winnerScreen"></div>
+                <button data-close-modal id="closeWinnerModal">RESTART</button>
+            </dialog>
+
+        </div>
+        <div class="content">
+            <div class="tictactoe">
+                <div id="a1" class="case"></div>
+                <div id="a2" class="case"></div>
+                <div id="a3" class="case"></div>
+                <div id="b1" class="case"></div>
+                <div id="b2" class="case"></div>
+                <div id="b3" class="case"></div>
+                <div id="c1" class="case"></div>
+                <div id="c2" class="case"></div>
+                <div id="c3" class="case"></div>
+            </div>
+        </div>
+    </div>
 </body>
 </html>

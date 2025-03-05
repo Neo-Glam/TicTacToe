@@ -1,0 +1,129 @@
+.doto {
+    font-family: "Doto", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    font-variation-settings:
+      "ROND" 0;
+  }
+
+/* 1. Use a more-intuitive box-sizing model */
+*, *::before, *::after {
+    box-sizing: border-box;
+  }
+  
+  /* 2. Remove default margin */
+  * {
+    margin: 0;
+  }
+  
+  body {
+    /* 3. Add accessible line-height */
+    line-height: 1.5;
+    /* 4. Improve text rendering */
+    -webkit-font-smoothing: antialiased;
+  }
+  
+  /* 5. Improve media defaults */
+  img, picture, video, canvas, svg {
+    display: block;
+    max-width: 100%;
+  }
+  
+  /* 6. Inherit fonts for form controls */
+  input, button, textarea, select {
+    font: inherit;
+  }
+  
+  /* 7. Avoid text overflows */
+  p, h1, h2, h3, h4, h5, h6 {
+    overflow-wrap: break-word;
+  }
+  
+  /* 8. Improve line wrapping */
+  p {
+    text-wrap: pretty;
+  }
+  h1, h2, h3, h4, h5, h6 {
+    text-wrap: balance;
+  }
+  
+  /*
+    9. Create a root stacking context
+  */
+  #root, #__next {
+    isolation: isolate;
+  }
+
+body{
+    font-family: "Doto", sans-serif;
+    background-color: var(--color2);
+    --color1 : #FCC737;
+    --color2 : #F26B0F;
+    --color3 : #E73879;
+    --color4 : #7E1891;
+}
+
+
+
+.header {
+    display: grid;
+    grid-template-columns: 8fr 1fr;
+    align-items: center;
+    text-align: center;
+    padding-left: 30px;
+    padding-right: 30px;
+    border-bottom: solid 1px;
+    background-color: var(--color1);
+}
+
+.header>h1{
+    padding-left: 13%;
+}
+
+button{
+    background-color: var(--color2);
+    border: solid var(--color4);
+    border-radius: 5px;
+    font-weight: 900;
+    width: fit-content    
+}
+
+.content{
+    display: grid;
+    grid-template-columns: 1.3fr 2fr 1.3fr;
+    background-color: var(--color2);
+    padding-top: 40px;
+}
+
+.tictactoe{
+    grid-column-start: 2;
+    display: grid;
+    grid-template-columns: repeat(3,minmax(278.266px,1fr));
+}
+.case{
+    border:  solid;
+    max-width: 278.266px;
+    aspect-ratio: 1/1;
+    border-collapse: collapse;
+    background-color: var(--color1);
+    font-weight: 900;
+    text-align: center;
+    align-content: center;
+    font-size: 9em;
+}
+
+:modal{
+    max-width: 500px;
+    display: grid;
+    gap: 5px;
+    background-color: var(--color1);
+    border: solid;
+    border-radius: 5px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    font-weight: 800;
+    align-items: center;
+}
